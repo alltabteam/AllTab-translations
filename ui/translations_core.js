@@ -125,8 +125,8 @@ const TRANSLATIONS = {
         settings_pin_tab_tooltip: "If this is enabled the AllTab app page will be a pinned tab.",
         settings_ignore_pinned: "Ignore Pinned Tabs",
         settings_ignore_pinned_tooltip: "If this is enabled, pinned tabs will never be saved to AllTab.",
-        settings_use_chrome_groups: "Use Chrome Groups",
-        settings_use_chrome_groups_tooltip: "When enabled, restoring a group will try to recreate the Chrome Tab Group with its original name and color.",
+        settings_use_chrome_groups: "Use Tab Groups",
+        settings_use_chrome_groups_tooltip: "When enabled, restoring a group will try to recreate the Tab Group with its original name and color.",
 
         // Settings - Tools
         settings_tools: "Tools",
@@ -178,7 +178,7 @@ const TRANSLATIONS = {
         export_btn_save: "Export New HTML (Save changes)",
         export_bookmark: "Bookmark Page",
         group_add_bookmarks_folder: "Add Group to Favorites",
-        bookmarks_chrome_tooltip: "Favorites are added to Chrome's bookmark bar",
+        bookmarks_chrome_tooltip: "Favorites are added to your browser's bookmark bar",
         export_save_app: "Download",
         export_footer_created: "Created using the extension",
         export_empty_title: "All clean!",
@@ -356,21 +356,23 @@ const TRANSLATIONS = {
         notes_viewer_exported: "Notes exported",
         notes_viewer_tip: "Tip: Use hashtags in your notes for easier filtering. E.g: #important #read-later",
         context_menu_tooltip: "More options (or right-click)",
-        context_copy_to_user: "Copy to another user",
-        copy_group_to_user: "Copy group to another user",
-        copied_to_user: "Copied to {user}",
-        no_other_users: "No other users available",
+        context_copy_to_space: "Copy to another space",
+        copy_group_to_space: "Copy group to another space",
+        copied_to_space: "Copied to {space}",
+        no_other_spaces: "No other spaces available",
 
-        // User Management
-        user_menu_title: "Users",
-        user_add: "Add User",
-        user_rename_title: "Rename User",
+        // Space Management
+        space_menu_title: "Spaces",
+        space_add: "Add Space",
+        space_rename_title: "Rename Space",
         btn_rename: "Rename",
         btn_delete: "Delete",
-        delete_user_confirm: "Are you sure you want to delete this user? All their tab groups will be lost.",
-        confirm_delete: "Are you sure you want to delete user",
+        delete_space_confirm: "Are you sure you want to delete this space? All its tab groups will be lost.",
+        confirm_delete: "Are you sure you want to delete space",
         drag_to_reorder: "Drag to reorder",
-        of_user: "of",
+        of_space: "of",
+        space_word: "Space",
+        space_info_tooltip: "Spaces let you separate your tabs by context: work, personal, projects, etc. Each space has its own tab groups.",
 
         // Storage Errors
         storage_error_quota: "⚠️ STORAGE FULL ⚠️\n\nYour changes could not be saved because you've exceeded the extension's storage limit.\n\nPlease:\n1. Delete old groups\n2. Or export your data and clean up",
@@ -452,6 +454,11 @@ const TRANSLATIONS = {
         import_invalid_format: "Please select a valid JSON file",
         import_invalid_data: "Invalid backup format",
         import_error: "Error reading file",
+        import_paste_toggle: "Paste JSON text",
+        import_paste_placeholder: "Paste your JSON backup here...",
+        import_paste_btn: "Process",
+        import_paste_empty: "Please paste JSON text first",
+        import_paste_invalid_json: "The pasted text is not valid JSON",
 
         // Domain Exclusions
         exclusions_btn: "Exclude domains...",
@@ -529,7 +536,7 @@ const TRANSLATIONS = {
         reset_description: "Delete all saved data and restore extension to its initial state",
         reset_button: "Reset extension",
         reset_confirm_title: "Reset extension?",
-        reset_confirm_message: "This will delete all saved tabs, groups, users and settings. This action cannot be undone.",
+        reset_confirm_message: "This will delete all saved tabs, groups, spaces and settings. This action cannot be undone.",
         reset_backup_checkbox: "Generate backup before resetting",
         reset_cancel: "Cancel",
         reset_confirm: "Reset",
@@ -547,7 +554,7 @@ const TRANSLATIONS = {
         backup_cancel: "Cancel reset",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ FINAL WARNING ⚠️\n\nThe following will be PERMANENTLY DELETED:\n\n• All saved tabs\n• All groups\n• All users\n• All settings and preferences\n\nThis action CANNOT be undone.\n\nAre you sure you want to proceed?",
+        reset_final_confirm: "⚠️ FINAL WARNING ⚠️\n\nThe following will be PERMANENTLY DELETED:\n\n• All saved tabs\n• All groups\n• All spaces\n• All settings and preferences\n\nThis action CANNOT be undone.\n\nAre you sure you want to proceed?",
 
         // Restore Backup
         restore_button: "Restore backup",
@@ -673,7 +680,7 @@ const TRANSLATIONS = {
         undo_no_devices: "No other devices found",
         undo_restore: "Restore",
         undo_selected: "selected",
-        undo_sign_in: "Sign in to Chrome to see tabs from other devices",
+        undo_sign_in: "Sign in to your browser to see tabs from other devices",
 
         // Dashboard extras
         no_metrics: "No results",
@@ -699,7 +706,16 @@ const TRANSLATIONS = {
         sleeping_error_no_url: "Error: Use the Dashboard to restore this tab.",
 
         // HTML keys
-        sidebar_quick_save: "Save"
+        sidebar_quick_save: "Save",
+
+        // Header Button Tooltips
+        tooltip_import_export: "Import / Export",
+        tooltip_import: "Import",
+        tooltip_settings: "Settings",
+        tooltip_tools: "Tools",
+        tooltip_language: "Change Language",
+        tooltip_theme: "Toggle Theme",
+        tooltip_help: "Help"
     },
 
     es: {
@@ -833,8 +849,8 @@ const TRANSLATIONS = {
         settings_pin_tab_tooltip: "Si se activa, la página de AllTab será una pestaña fijada.",
         settings_ignore_pinned: "Ignorar pestañas fijadas",
         settings_ignore_pinned_tooltip: "Si se activa, las pestañas fijadas no se guardarán en AllTab.",
-        settings_use_chrome_groups: "Usar Grupos de Chrome",
-        settings_use_chrome_groups_tooltip: "Si se activa, al restaurar un grupo se intentará recrear el Grupo de Pestañas de Chrome con su nombre y color original.",
+        settings_use_chrome_groups: "Usar Grupos de Pestañas",
+        settings_use_chrome_groups_tooltip: "Si se activa, al restaurar un grupo se intentará recrear el Grupo de Pestañas del navegador con su nombre y color original.",
 
         // Settings - Tools
         settings_tools: "Herramientas",
@@ -886,7 +902,7 @@ const TRANSLATIONS = {
         export_btn_save: "Exportar Nuevo HTML (Guardar cambios)",
         export_bookmark: "Añadir a Favoritos",
         group_add_bookmarks_folder: "Añadir grupo a Favoritos",
-        bookmarks_chrome_tooltip: "Los favoritos se añaden a la barra de marcadores de Chrome",
+        bookmarks_chrome_tooltip: "Los favoritos se añaden a la barra de marcadores del navegador",
         export_save_app: "Descargar",
         export_footer_created: "Creado con la extensión",
         export_empty_title: "¡Todo limpio!",
@@ -1083,21 +1099,23 @@ const TRANSLATIONS = {
         notes_viewer_exported: "Notas exportadas",
         notes_viewer_tip: "Consejo: Usa hashtags en tus notas para filtrar mejor. Ej: #importante #leer-después",
         context_menu_tooltip: "Más opciones (o clic derecho)",
-        context_copy_to_user: "Copiar a otro usuario",
-        copy_group_to_user: "Copiar grupo a otro usuario",
-        copied_to_user: "Copiado a {user}",
-        no_other_users: "No hay otros usuarios disponibles",
+        context_copy_to_space: "Copiar a otro espacio",
+        copy_group_to_space: "Copiar grupo a otro espacio",
+        copied_to_space: "Copiado en {space}",
+        no_other_spaces: "No hay otros espacios disponibles",
 
-        // User Management
-        user_menu_title: "Usuarios",
-        user_add: "Añadir Usuario",
-        user_rename_title: "Renombrar Usuario",
+        // Space Management
+        space_menu_title: "Espacios",
+        space_add: "Añadir Espacio",
+        space_rename_title: "Renombrar Espacio",
         btn_rename: "Renombrar",
         btn_delete: "Eliminar",
-        delete_user_confirm: "¿Estás seguro de que quieres eliminar este usuario? Todos sus grupos de pestañas se perderán.",
-        confirm_delete: "¿Estás seguro de eliminar el usuario",
+        delete_space_confirm: "¿Estás seguro de que quieres eliminar este espacio? Todos sus grupos de pestañas se perderán.",
+        confirm_delete: "¿Estás seguro de eliminar el espacio",
         drag_to_reorder: "Arrastrar para reordenar",
-        of_user: "de",
+        of_space: "de",
+        space_word: "Espacio",
+        space_info_tooltip: "Los espacios te permiten separar tus pestañas por contexto: trabajo, personal, proyectos, etc. Cada espacio tiene sus propios grupos de pestañas.",
 
         // Storage Errors
         storage_error_quota: "⚠️ DISCO LLENO ⚠️\n\nNo se pueden guardar tus cambios porque has superado el límite de almacenamiento de la extensión.\n\nPor favor:\n1. Elimina grupos antiguos\n2. O exporta tus datos y limpia",
@@ -1184,6 +1202,11 @@ const TRANSLATIONS = {
         import_invalid_format: "Por favor, selecciona un archivo JSON válido",
         import_invalid_data: "Formato de backup inválido",
         import_error: "Error al leer el archivo",
+        import_paste_toggle: "Pegar texto JSON",
+        import_paste_placeholder: "Pega tu backup JSON aquí...",
+        import_paste_btn: "Procesar",
+        import_paste_empty: "Por favor, pega el texto JSON primero",
+        import_paste_invalid_json: "El texto pegado no es un JSON válido",
 
         // Domain Exclusions
         exclusions_btn: "Excluir dominios...",
@@ -1229,7 +1252,7 @@ const TRANSLATIONS = {
         reset_description: "Elimina todos los datos guardados y deja la extensión como recién instalada",
         reset_button: "Restablecer extensión",
         reset_confirm_title: "¿Restablecer extensión?",
-        reset_confirm_message: "Esta acción eliminará todas las pestañas guardadas, grupos, usuarios y configuraciones. Esta acción no se puede deshacer.",
+        reset_confirm_message: "Esta acción eliminará todas las pestañas guardadas, grupos, espacios y configuraciones. Esta acción no se puede deshacer.",
         reset_backup_checkbox: "Generar backup antes de restablecer",
         reset_cancel: "Cancelar",
         reset_confirm: "Restablecer",
@@ -1247,7 +1270,7 @@ const TRANSLATIONS = {
         backup_cancel: "Cancelar reset",
 
         // Final Reset Confirmation  
-        reset_final_confirm: "⚠️ ADVERTENCIA FINAL ⚠️\n\nLo siguiente se BORRARÁ PERMANENTEMENTE:\n\n• Todas las pestañas guardadas\n• Todos los grupos\n• Todos los usuarios\n• Toda la configuración y preferencias\n\nEsta acción NO SE PUEDE deshacer.\n\n¿Estás seguro de que quieres continuar?",
+        reset_final_confirm: "⚠️ ADVERTENCIA FINAL ⚠️\n\nLo siguiente se BORRARÁ PERMANENTEMENTE:\n\n• Todas las pestañas guardadas\n• Todos los grupos\n• Todos los espacios\n• Toda la configuración y preferencias\n\nEsta acción NO SE PUEDE deshacer.\n\n¿Estás seguro de que quieres continuar?",
 
         // Restore Backup
         restore_button: "Restaurar backup",
@@ -1288,6 +1311,15 @@ const TRANSLATIONS = {
         decrypt_error: "Contraseña incorrecta o archivo corrupto",
         help_opened_tab: "Ayuda abierta en una nueva pestaña",
         about_opened_tab: "Acerca de abierto en una nueva pestaña",
+
+        // Header Button Tooltips
+        tooltip_import_export: "Importar / Exportar",
+        tooltip_import: "Importar",
+        tooltip_settings: "Ajustes",
+        tooltip_tools: "Herramientas",
+        tooltip_language: "Cambiar idioma",
+        tooltip_theme: "Cambiar tema",
+        tooltip_help: "Ayuda",
 
         // Auto-Backup
         backup_auto_btn: "Auto-Backup",
@@ -1373,7 +1405,7 @@ const TRANSLATIONS = {
         undo_no_devices: "No se encontraron otros dispositivos",
         undo_restore: "Restaurar",
         undo_selected: "seleccionadas",
-        undo_sign_in: "Inicia sesión en Chrome para ver pestañas de otros dispositivos",
+        undo_sign_in: "Inicia sesión en tu navegador para ver pestañas de otros dispositivos",
 
         // Dashboard extras
         no_metrics: "Sin resultados",

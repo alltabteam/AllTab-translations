@@ -127,8 +127,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "如果启用，AllTab 应用页面将成为固定标签页。",
         settings_ignore_pinned: "忽略固定标签页",
         settings_ignore_pinned_tooltip: "如果启用，固定标签页将永远不会保存到 AllTab。",
-        settings_use_chrome_groups: "使用 Chrome 组",
-        settings_use_chrome_groups_tooltip: "启用后，恢复组将尝试使用其原始名称和颜色重新创建 Chrome 标签页组。",
+        settings_use_chrome_groups: "使用标签页组",
+        settings_use_chrome_groups_tooltip: "启用后，恢复组将尝试使用其原始名称和颜色重新创建浏览器标签页组。",
 
         // Settings - Tools
         settings_tools: "工具",
@@ -180,7 +180,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "导出新HTML（保存更改）",
         export_bookmark: "添加到书签",
         group_add_bookmarks_folder: "将组添加到收藏夹",
-        bookmarks_chrome_tooltip: "收藏夹将添加到 Chrome 的书签栏",
+        bookmarks_chrome_tooltip: "收藏夹将添加到浏览器的书签栏",
         export_save_app: "下载",
         export_footer_created: "使用扩展程序创建",
         export_empty_title: "全部清理完毕！",
@@ -358,21 +358,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "备注已导出",
         notes_viewer_tip: "提示：在备注中使用标签以便于过滤。例如：#重要 #稍后阅读",
         context_menu_tooltip: "更多选项（或右键点击）",
-        context_copy_to_user: "复制给另一个用户",
-        copy_group_to_user: "复制组给另一个用户",
-        copied_to_user: "已复制给 {user}",
-        no_other_users: "没有其他可用用户",
+        context_copy_to_space: "复制给另一个空间",
+        copy_group_to_space: "复制组给另一个空间",
+        copied_to_space: "已复制给 {space}",
+        no_other_spaces: "没有其他可用空间",
 
-        // User Management
-        user_menu_title: "用户",
-        user_add: "添加用户",
-        user_rename_title: "重命名用户",
+        // Space Management
+        space_menu_title: "空间",
+        space_add: "添加空间",
+        space_rename_title: "重命名空间",
         btn_rename: "重命名",
         btn_delete: "删除",
-        delete_user_confirm: "您确定要删除此用户吗？他们所有的标签组都将丢失。",
-        confirm_delete: "您确定要删除用户",
+        delete_space_confirm: "您确定要删除此空间吗？其所有的标签组都将丢失。",
+        confirm_delete: "您确定要删除空间",
         drag_to_reorder: "拖动以重新排序",
-        of_user: "的",
+        of_space: "的",
+        space_word: "空间",
+        space_info_tooltip: "空间可以让你按场景分类标签页：工作、个人、项目等。每个空间都有自己独立的标签页组。",
 
         // Storage Errors
         storage_error_quota: "⚠️ 存储空间已满 ⚠️\n\n由于超出了扩展程序的存储限制，无法保存您的更改。\n\n请：\n1. 删除旧组\n2. 或导出数据并清理",
@@ -450,6 +452,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "或",
         import_browse: "浏览文件",
         import_drop_hint: "仅接受 .json 文件",
+        import_paste_toggle: "粘贴 JSON 文本",
+        import_paste_placeholder: "在此粘贴您的 JSON 备份...",
+        import_paste_btn: "处理",
+        import_paste_empty: "请先粘贴 JSON 文本",
+        import_paste_invalid_json: "粘贴的文本不是有效的 JSON",
         import_one_file_only: "请一次仅拖放一个文件",
         import_invalid_format: "请选择有效的 JSON 文件",
         import_invalid_data: "无效的备份格式",
@@ -531,7 +538,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "删除所有保存的数据并将扩展恢复到初始状态",
         reset_button: "重置扩展",
         reset_confirm_title: "重置扩展？",
-        reset_confirm_message: "这将删除所有保存的标签、组、用户和设置。此操作无法撤销。",
+        reset_confirm_message: "这将删除所有保存的标签、组、空间和设置。此操作无法撤销。",
         reset_backup_checkbox: "重置前生成备份",
         reset_cancel: "取消",
         reset_confirm: "重置",
@@ -549,7 +556,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "取消重置",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ 最终警告 ⚠️\n\n以下内容将被永久删除：\n\n• 所有保存的标签页\n• 所有组\n• 所有用户\n• 所有设置和首选项\n\n此操作无法撤销。\n\n您确定要继续吗？",
+        reset_final_confirm: "⚠️ 最终警告 ⚠️\n\n以下内容将被永久删除：\n\n• 所有保存的标签页\n• 所有组\n• 所有空间\n• 所有设置和首选项\n\n此操作无法撤销。\n\n您确定要继续吗？",
 
         // Restore Backup
         restore_button: "恢复备份",
@@ -675,7 +682,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "未找到其他设备",
         undo_restore: "恢复",
         undo_selected: "已选",
-        undo_sign_in: "登录 Chrome 查看其他设备",
+        undo_sign_in: "登录您的浏览器以查看其他设备的标签页",
 
         // Dashboard extras
         no_metrics: "无结果",
@@ -701,7 +708,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "错误：使用仪表板恢复此标签页。",
 
         // HTML keys
-        sidebar_quick_save: "保存"
+        sidebar_quick_save: "保存",
+
+        // Header Button Tooltips
+        tooltip_import_export: "导入 / 导出",
+        tooltip_import: "导入",
+        tooltip_settings: "设置",
+        tooltip_tools: "工具",
+        tooltip_language: "更改语言",
+        tooltip_theme: "切换主题",
+        tooltip_help: "帮助"
     };
 
     // ja
@@ -829,8 +845,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "有効にすると、AllTab アプリページが固定タブになります。",
         settings_ignore_pinned: "固定タブを無視",
         settings_ignore_pinned_tooltip: "有効にすると、固定されたタブは AllTab に保存されません。",
-        settings_use_chrome_groups: "Chrome グループを使用",
-        settings_use_chrome_groups_tooltip: "有効にすると、グループを復元する際に元の名前と色で Chrome タブグループの再作成を試みます。",
+        settings_use_chrome_groups: "タブグループを使用",
+        settings_use_chrome_groups_tooltip: "有効にすると、グループを復元する際に元の名前と色でブラウザのタブグループの再作成を試みます。",
 
         // Settings - Tools
         settings_tools: "ツール",
@@ -881,7 +897,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "新しい HTML をエクスポート (変更を保存)",
         export_bookmark: "ページをブックマーク",
         group_add_bookmarks_folder: "グループをお気に入りに追加",
-        bookmarks_chrome_tooltip: "お気に入りは Chrome のブックマークバーに追加されます",
+        bookmarks_chrome_tooltip: "お気に入りはブラウザのブックマークバーに追加されます",
         export_save_app: "ダウンロード",
         export_footer_created: "拡張機能を使用して作成",
         export_empty_title: "すべて完了！",
@@ -1059,21 +1075,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "メモをエクスポートしました",
         notes_viewer_tip: "ヒント：メモにタグを使用してフィルタリングしやすくします。例：#重要 #あとで読む",
         context_menu_tooltip: "その他のオプション (または右クリック)",
-        context_copy_to_user: "別のユーザーにコピー",
-        copy_group_to_user: "グループを別のユーザーにコピー",
-        copied_to_user: "{user} にコピーしました",
-        no_other_users: "利用可能な他のユーザーがいません",
+        context_copy_to_space: "別のスペースにコピー",
+        copy_group_to_space: "グループを別のスペースにコピー",
+        copied_to_space: "{space} にコピーしました",
+        no_other_spaces: "利用可能な他のスペースがありません",
 
-        // User Management
-        user_menu_title: "ユーザー",
-        user_add: "ユーザーを追加",
-        user_rename_title: "ユーザー名を変更",
+        // Space Management
+        space_menu_title: "スペース",
+        space_add: "スペースを追加",
+        space_rename_title: "スペース名を変更",
         btn_rename: "名前を変更",
         btn_delete: "削除",
-        delete_user_confirm: "このユーザーを削除してもよろしいですか？ すべてのタブグループが失われます。",
-        confirm_delete: "ユーザーを削除しますか",
+        delete_space_confirm: "このスペースを削除してもよろしいですか？ すべてのタブグループが失われます。",
+        confirm_delete: "スペースを削除しますか",
         drag_to_reorder: "ドラッグして並べ替え",
-        of_user: "の",
+        of_space: "の",
+        space_word: "スペース",
+        space_info_tooltip: "スペースを使うと、タブを用途ごとに分けられます：仕事、プライベート、プロジェクトなど。各スペースには独自のタブグループがあります。",
 
         // Storage Errors
         storage_error_quota: "⚠️ ストレージがい扱いです ⚠️\n\n拡張機能のストレージ制限を超えたため、変更を保存できませんでした。\n\n対応策：\n1. 古いグループを削除する\n2. またはデータをエクスポートして整理する",
@@ -1151,6 +1169,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "または",
         import_browse: "ファイルを参照",
         import_drop_hint: ".json ファイルのみ",
+        import_paste_toggle: "JSONテキストを貼り付け",
+        import_paste_placeholder: "JSONバックアップをここに貼り付けてください...",
+        import_paste_btn: "処理",
+        import_paste_empty: "JSONテキストを先に貼り付けてください",
+        import_paste_invalid_json: "貼り付けたテキストは有効なJSONではありません",
         import_one_file_only: "一度に1つのファイルのみドロップしてください",
         import_invalid_format: "有効な JSON ファイルを選択してください",
         import_invalid_data: "無効なバックアップ形式",
@@ -1232,7 +1255,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "保存されたすべてのデータを削除し、拡張機能を初期状態に戻します",
         reset_button: "拡張機能をリセット",
         reset_confirm_title: "リセットしますか？",
-        reset_confirm_message: "これにり、保存されたすべてのタブ、グループ、ユーザー、設定が削除されます。この操作は元に戻せません。",
+        reset_confirm_message: "これにより、保存されたすべてのタブ、グループ、スペース、設定が削除されます。この操作は元に戻せません。",
         reset_backup_checkbox: "リセット前にバックアップを生成",
         reset_cancel: "キャンセル",
         reset_confirm: "リセット",
@@ -1250,7 +1273,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "リセットをキャンセル",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ 最終警告 ⚠️\n\n以下が永久に削除されます：\n\n• すべての保存済みタブ\n• すべてのグループ\n• すべてのユーザー\n• すべての設定\n\nこの操作は元に戻せません。\n\n本当に続行しますか？",
+        reset_final_confirm: "⚠️ 最終警告 ⚠️\n\n以下が永久に削除されます：\n\n• すべての保存済みタブ\n• すべてのグループ\n• すべてのスペース\n• すべての設定\n\nこの操作は元に戻せません。\n\n本当に続行しますか？",
 
         // Restore Backup
         restore_button: "バックアップを復元",
@@ -1376,7 +1399,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "他のデバイスが見つかりません",
         undo_restore: "復元",
         undo_selected: "選択済み",
-        undo_sign_in: "Chrome にログインして他のデバイスを表示",
+        undo_sign_in: "ブラウザにログインして他のデバイスのタブを表示",
 
         // Dashboard extras
         no_metrics: "結果なし",
@@ -1402,7 +1425,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "エラー：このタブを復元するにはダッシュボードを使用してください。",
 
         // HTML keys
-        sidebar_quick_save: "保存"
+        sidebar_quick_save: "保存",
+
+        // Header Button Tooltips
+        tooltip_import_export: "インポート / エクスポート",
+        tooltip_import: "インポート",
+        tooltip_settings: "設定",
+        tooltip_tools: "ツール",
+        tooltip_language: "言語を変更",
+        tooltip_theme: "テーマを切り替え",
+        tooltip_help: "ヘルプ"
     };
 
     // ru
@@ -1530,8 +1562,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "Если включено, страница AllTab будет закрепленной вкладкой.",
         settings_ignore_pinned: "Игнорировать закрепленные вкладки",
         settings_ignore_pinned_tooltip: "Если включено, закрепленные вкладки никогда не будут сохраняться в AllTab.",
-        settings_use_chrome_groups: "Использовать группы Chrome",
-        settings_use_chrome_groups_tooltip: "Если включено, при восстановлении группы будет сделана попытка воссоздать группу вкладок Chrome с её исходным именем и цветом.",
+        settings_use_chrome_groups: "Использовать группы вкладок",
+        settings_use_chrome_groups_tooltip: "Если включено, при восстановлении группы будет сделана попытка воссоздать группу вкладок браузера с её исходным именем и цветом.",
 
         // Settings - Tools
         settings_tools: "Инструменты",
@@ -1582,7 +1614,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "Экспорт нового HTML (Сохранить изменения)",
         export_bookmark: "В закладки",
         group_add_bookmarks_folder: "Добавить группу в избранное",
-        bookmarks_chrome_tooltip: "Избранное будет добавлено в панель закладок Chrome",
+        bookmarks_chrome_tooltip: "Избранное будет добавлено в панель закладок браузера",
         export_save_app: "Скачать",
         export_footer_created: "Создано с помощью расширения",
         export_empty_title: "Все чисто!",
@@ -1760,21 +1792,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "Заметки экспортированы",
         notes_viewer_tip: "Совет: используйте теги в заметках для удобной фильтрации. Например: #важно #прочитать_позже",
         context_menu_tooltip: "Больше опций (или пкм)",
-        context_copy_to_user: "Копировать другому пользователю",
-        copy_group_to_user: "Копировать группу другому пользователю",
-        copied_to_user: "Скопировано пользователю {user}",
-        no_other_users: "Нет других доступных пользователей",
+        context_copy_to_space: "Копировать в другое пространство",
+        copy_group_to_space: "Копировать группу в другое пространство",
+        copied_to_space: "Скопировано в {space}",
+        no_other_spaces: "Нет других доступных пространств",
 
-        // User Management
-        user_menu_title: "Пользователи",
-        user_add: "Добавить пользователя",
-        user_rename_title: "Переименовать пользователя",
+        // Space Management
+        space_menu_title: "Пространства",
+        space_add: "Добавить пространство",
+        space_rename_title: "Переименовать пространство",
         btn_rename: "Переименовать",
         btn_delete: "Удалить",
-        delete_user_confirm: "Вы уверены, что хотите удалить этого пользователя? Все его группы вкладок будут потеряны.",
-        confirm_delete: "Вы уверены, что хотите удалить пользователя",
+        delete_space_confirm: "Вы уверены, что хотите удалить это пространство? Все его группы вкладок будут потеряны.",
+        confirm_delete: "Вы уверены, что хотите удалить пространство",
         drag_to_reorder: "Перетащите для изменения порядка",
-        of_user: "пользователя",
+        of_space: "пространства",
+        space_word: "Пространство",
+        space_info_tooltip: "Пространства позволяют разделять вкладки по контексту: работа, личное, проекты и т.д. У каждого пространства свои группы вкладок.",
 
         // Storage Errors
         storage_error_quota: "⚠️ Хранилище заполнено ⚠️\n\nВаши изменения не удалось сохранить, так как превышен лимит хранилища расширения.\n\nПожалуйста:\n1. Удалите старые группы\n2. Или экспортируйте данные и очистите список",
@@ -1852,6 +1886,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "или",
         import_browse: "Обзор файлов",
         import_drop_hint: "Только .json файлы",
+        import_paste_toggle: "Вставить JSON текст",
+        import_paste_placeholder: "Вставьте ваш JSON бэкап сюда...",
+        import_paste_btn: "Обработать",
+        import_paste_empty: "Сначала вставьте текст JSON",
+        import_paste_invalid_json: "Вставленный текст не является допустимым JSON",
         import_one_file_only: "Пожалуйста, перетаскивайте только один файл за раз",
         import_invalid_format: "Пожалуйста, выберите действительный JSON файл",
         import_invalid_data: "Неверный формат бэкапа",
@@ -1933,7 +1972,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "Удалить все сохраненные данные и вернуть расширение в исходное состояние",
         reset_button: "Сбросить расширение",
         reset_confirm_title: "Сбросить расширение?",
-        reset_confirm_message: "Это удалит все сохраненные вкладки, группы, пользователей и настройки. Это действие нельзя отменить.",
+        reset_confirm_message: "Это удалит все сохраненные вкладки, группы, пространства и настройки. Это действие нельзя отменить.",
         reset_backup_checkbox: "Создать бэкап перед сбросом",
         reset_cancel: "Отмена",
         reset_confirm: "Сбросить",
@@ -1951,7 +1990,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "Отменить сброс",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ ПОСЛЕДНЕЕ ПРЕДУПРЕЖДЕНИЕ ⚠️\n\nСледующее будет удалено НАВСЕГДА:\n\n• Все сохраненные вкладки\n• Все группы\n• Все пользователи\n• Все настройки\n\nЭто действие НЕЛЬЗЯ отменить.\n\nВы уверены, что хотите продолжить?",
+        reset_final_confirm: "⚠️ ПОСЛЕДНЕЕ ПРЕДУПРЕЖДЕНИЕ ⚠️\n\nСледующее будет удалено НАВСЕГДА:\n\n• Все сохраненные вкладки\n• Все группы\n• Все пространства\n• Все настройки\n\nЭто действие НЕЛЬЗЯ отменить.\n\nВы уверены, что хотите продолжить?",
 
         // Restore Backup
         restore_button: "Восстановить бэкап",
@@ -2077,7 +2116,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "Другие устройства не найдены",
         undo_restore: "Восстановить",
         undo_selected: "Выбрано",
-        undo_sign_in: "Войдите в Chrome для синхронизации",
+        undo_sign_in: "Войдите в браузер для синхронизации вкладок с других устройств",
 
         // Dashboard extras
         no_metrics: "Нет данных",
@@ -2103,7 +2142,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "Ошибка: используйте панель для восстановления этой вкладки.",
 
         // HTML keys
-        sidebar_quick_save: "Сохранить"
+        sidebar_quick_save: "Сохранить",
+
+        // Header Button Tooltips
+        tooltip_import_export: "Импорт / Экспорт",
+        tooltip_import: "Импорт",
+        tooltip_settings: "Настройки",
+        tooltip_tools: "Инструменты",
+        tooltip_language: "Изменить язык",
+        tooltip_theme: "Сменить тему",
+        tooltip_help: "Помощь"
     };
 
 
@@ -2232,8 +2280,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "सक्षम होने पर, AllTab ऐप पेज एक पिन किया हुआ टैब बन जाएगा।",
         settings_ignore_pinned: "पिन किए गए टैब को अनदेखा करें",
         settings_ignore_pinned_tooltip: "सक्षम होने पर, पिन किए गए टैब कभी भी AllTab में सेव नहीं होंगे।",
-        settings_use_chrome_groups: "Chrome ग्रुप का उपयोग करें",
-        settings_use_chrome_groups_tooltip: "सक्षम होने पर, ग्रुप को रिस्टोर करते समय, यह उसके मूल नाम और रंग के साथ Chrome टैब ग्रुप को फिर से बनाने का प्रयास करेगा।",
+        settings_use_chrome_groups: "टैब ग्रुप का उपयोग करें",
+        settings_use_chrome_groups_tooltip: "सक्षम होने पर, ग्रुप को रिस्टोर करते समय, यह उसके मूल नाम और रंग के साथ ब्राउज़र टैब ग्रुप को फिर से बनाने का प्रयास करेगा।",
 
         // Settings - Tools
         settings_tools: "टूल्स",
@@ -2284,7 +2332,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "नया HTML एक्सपोर्ट करें (बदलाव सेव करें)",
         export_bookmark: "बुकमार्क करें",
         group_add_bookmarks_folder: "ग्रुप को पसंदीदा में जोड़ें",
-        bookmarks_chrome_tooltip: "पसंदीदा Chrome बुकमार्क बार में जोड़े जाएंगे",
+        bookmarks_chrome_tooltip: "पसंदीदा ब्राउज़र बुकमार्क बार में जोड़े जाएंगे",
         export_save_app: "डाउनलोड",
         export_footer_created: "एक्सटेंशन के साथ बनाया गया",
         export_empty_title: "सब साफ़!",
@@ -2462,21 +2510,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "नोट्स एक्सपोर्ट किए गए",
         notes_viewer_tip: "सुझाव: आसान फ़िल्टरिंग के लिए अपने नोट्स में टैग का उपयोग करें। उदा: #महत्वपूर्ण #बाद_में_पढ़ें",
         context_menu_tooltip: "अधिक विकल्प (या राइट क्लिक)",
-        context_copy_to_user: "दूसरे उपयोगकर्ता को कॉपी करें",
-        copy_group_to_user: "ग्रुप को दूसरे उपयोगकर्ता को कॉपी करें",
-        copied_to_user: "{user} को कॉपी किया गया",
-        no_other_users: "कोई अन्य उपयोगकर्ता उपलब्ध नहीं",
+        context_copy_to_space: "दूसरे स्पेस में कॉपी करें",
+        copy_group_to_space: "ग्रुप को दूसरे स्पेस में कॉपी करें",
+        copied_to_space: "{space} में कॉपी किया गया",
+        no_other_spaces: "कोई अन्य स्पेस उपलब्ध नहीं",
 
-        // User Management
-        user_menu_title: "उपयोगकर्ता",
-        user_add: "उपयोगकर्ता जोड़ें",
-        user_rename_title: "उपयोगकर्ता का नाम बदलें",
+        // Space Management
+        space_menu_title: "स्पेस",
+        space_add: "स्पेस जोड़ें",
+        space_rename_title: "स्पेस का नाम बदलें",
         btn_rename: "नाम बदलें",
         btn_delete: "हटाएं",
-        delete_user_confirm: "क्या आप वाकई इस उपयोगकर्ता को हटाना चाहते हैं? इसके सभी टैब ग्रुप खो जाएंगे।",
-        confirm_delete: "क्या आप उपयोगकर्ता को हटाना चाहते हैं",
+        delete_space_confirm: "क्या आप वाकई इस स्पेस को हटाना चाहते हैं? इसके सभी टैब ग्रुप खो जाएंगे।",
+        confirm_delete: "क्या आप स्पेस को हटाना चाहते हैं",
         drag_to_reorder: "पुनर्व्यवस्थित करने के लिए खींचें",
-        of_user: "का",
+        of_space: "का",
+        space_word: "स्पेस",
+        space_info_tooltip: "स्पेस आपको अपने टैब को संदर्भ के अनुसार अलग करने देते हैं: काम, व्यक्तिगत, प्रोजेक्ट आदि। हर स्पेस के अपने टैब ग्रुप होते हैं।",
 
         // Storage Errors
         storage_error_quota: "⚠️ स्टोरेज फुल ⚠️\n\nआपके परिवर्तन सहेजे नहीं जा सके क्योंकि एक्सटेंशन का स्टोरेज कोटा पार हो गया है।\n\nकृपया:\n1. पुराने ग्रुप हटाएं\n2. या डेटा एक्सपोर्ट करें और सूची साफ़ करें",
@@ -2554,6 +2604,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "या",
         import_browse: "फ़ाइलें ब्राउज़ करें",
         import_drop_hint: "केवल .json फ़ाइलें",
+        import_paste_toggle: "JSON टेक्स्ट पेस्ट करें",
+        import_paste_placeholder: "अपना JSON बैकअप यहाँ पेस्ट करें...",
+        import_paste_btn: "प्रोसेस",
+        import_paste_empty: "पहले JSON टेक्स्ट पेस्ट करें",
+        import_paste_invalid_json: "पेस्ट किया गया टेक्स्ट वैध JSON नहीं है",
         import_one_file_only: "कृपया एक बार में केवल एक फ़ाइल छोड़ें",
         import_invalid_format: "कृपया एक वैध JSON फ़ाइल चुनें",
         import_invalid_data: "अवैध बैकअप प्रारूप",
@@ -2635,7 +2690,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "सभी सेव किए गए डेटा को हटाएं और एक्सटेंशन को उसकी मूल स्थिति में लौटाएं",
         reset_button: "एक्सटेंशन रीसेट करें",
         reset_confirm_title: "एक्सटेंशन रीसेट करें?",
-        reset_confirm_message: "यह सभी सेव किए गए टैब, ग्रुप, उपयोगकर्ता और सेटिंग्स को हटा देगा। यह क्रिया पूर्ववत नहीं की जा सकती।",
+        reset_confirm_message: "यह सभी सेव किए गए टैब, ग्रुप, स्पेस और सेटिंग्स को हटा देगा। यह क्रिया पूर्ववत नहीं की जा सकती।",
         reset_backup_checkbox: "रीसेट से पहले बैकअप बनाएं",
         reset_cancel: "रद्द करें",
         reset_confirm: "रीसेट",
@@ -2653,7 +2708,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "रीसेट रद्द करें",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ अंतिम चेतावनी ⚠️\n\nनिम्नलिखित हमेशा के लिए हटा दिए जाएंगे:\n\n• सभी सेव किए गए टैब\n• सभी ग्रुप\n• सभी उपयोगकर्ता\n• सभी सेटिंग्स\n\nयह क्रिया पूर्ववत नहीं की जा सकती।\n\nक्या आप वाकई जारी रखना चाहते हैं?",
+        reset_final_confirm: "⚠️ अंतिम चेतावनी ⚠️\n\nनिम्नलिखित हमेशा के लिए हटा दिए जाएंगे:\n\n• सभी सेव किए गए टैब\n• सभी ग्रुप\n• सभी स्पेस\n• सभी सेटिंग्स\n\nयह क्रिया पूर्ववत नहीं की जा सकती।\n\nक्या आप वाकई जारी रखना चाहते हैं?",
 
         // Restore Backup
         restore_button: "बैकअप रिस्टोर करें",
@@ -2779,7 +2834,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "कोई अन्य डिवाइस नहीं मिला",
         undo_restore: "रिस्टोर",
         undo_selected: "चयनित",
-        undo_sign_in: "अन्य डिवाइस देखने के लिए Chrome में साइन इन करें",
+        undo_sign_in: "अन्य डिवाइस देखने के लिए अपने ब्राउज़र में साइन इन करें",
 
         // Dashboard extras
         no_metrics: "कोई परिणाम नहीं",
@@ -2805,7 +2860,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "त्रुटि: इस टैब को रिस्टोर करने के लिए डैशबोर्ड का उपयोग करें।",
 
         // HTML keys
-        sidebar_quick_save: "सेव करें"
+        sidebar_quick_save: "सेव करें",
+
+        // Header Button Tooltips
+        tooltip_import_export: "आयात / निर्यात",
+        tooltip_import: "आयात",
+        tooltip_settings: "सेटिंग्स",
+        tooltip_tools: "टूल्स",
+        tooltip_language: "भाषा बदलें",
+        tooltip_theme: "थीम बदलें",
+        tooltip_help: "मदद"
     };
     // ar
     TRANSLATIONS.ar = {
@@ -2932,8 +2996,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "إذا تم التمكين، ستصبح صفحة AllTab علامة تبويب مثبتة.",
         settings_ignore_pinned: "تجاهل علامات التبويب المثبتة",
         settings_ignore_pinned_tooltip: "إذا تم التمكين، لن يتم حفظ علامات التبويب المثبتة أبدًا في AllTab.",
-        settings_use_chrome_groups: "استخدام مجموعات Chrome",
-        settings_use_chrome_groups_tooltip: "إذا تم التمكين، عند استعادة مجموعة، سيحاول إعادة إنشاء مجموعة علامات تبويب Chrome باسمها ولونها الأصلي.",
+        settings_use_chrome_groups: "استخدام مجموعات علامات التبويب",
+        settings_use_chrome_groups_tooltip: "إذا تم التمكين، عند استعادة مجموعة، سيحاول إعادة إنشاء مجموعة علامات تبويب المتصفح باسمها ولونها الأصلي.",
 
         // Settings - Tools
         settings_tools: "أدوات",
@@ -2984,7 +3048,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "تصدير HTML جديد (حفظ التغييرات)",
         export_bookmark: "إشارة مرجعية",
         group_add_bookmarks_folder: "إضافة المجموعة إلى المفضلة",
-        bookmarks_chrome_tooltip: "سيتم إضافة المفضلة إلى شريط إشارات Chrome",
+        bookmarks_chrome_tooltip: "سيتم إضافة المفضلة إلى شريط إشارات المتصفح",
         export_save_app: "تحميل",
         export_footer_created: "تم الإنشاء بواسطة الامتداد",
         export_empty_title: "كل شيء نظيف!",
@@ -3162,21 +3226,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "تم تصدير الملاحظات",
         notes_viewer_tip: "نصيحة: استخدم العلامات في ملاحظاتك لسهولة التصفية. مثال: #هام #للقراءة_لاحقاً",
         context_menu_tooltip: "المزيد من الخيارات (أو زر الفأرة الأيمن)",
-        context_copy_to_user: "نسخ لمستخدم آخر",
-        copy_group_to_user: "نسخ المجموعة لمستخدم آخر",
-        copied_to_user: "تم النسخ إلى {user}",
-        no_other_users: "لا يوجد مستخدمون آخرون متاحون",
+        context_copy_to_space: "نسخ إلى مساحة أخرى",
+        copy_group_to_space: "نسخ المجموعة إلى مساحة أخرى",
+        copied_to_space: "تم النسخ إلى {space}",
+        no_other_spaces: "لا توجد مساحات أخرى متاحة",
 
-        // User Management
-        user_menu_title: "المستخدمون",
-        user_add: "إضافة مستخدم",
-        user_rename_title: "إعادة تسمية المستخدم",
+        // Space Management
+        space_menu_title: "المساحات",
+        space_add: "إضافة مساحة",
+        space_rename_title: "إعادة تسمية المساحة",
         btn_rename: "إعادة تسمية",
         btn_delete: "حذف",
-        delete_user_confirm: "هل أنت متأكد أنك تريد حذف هذا المستخدم؟ ستفقد جميع مجموعات علامات التبويب الخاصة به.",
-        confirm_delete: "هل تريد حذف المستخدم",
+        delete_space_confirm: "هل أنت متأكد أنك تريد حذف هذه المساحة؟ ستفقد جميع مجموعات علامات التبويب الخاصة بها.",
+        confirm_delete: "هل تريد حذف المساحة",
         drag_to_reorder: "اسحب لإعادة الترتيب",
-        of_user: "لـ",
+        of_space: "لـ",
+        space_word: "مساحة",
+        space_info_tooltip: "تتيح لك المساحات فصل علامات التبويب حسب السياق: العمل، الشخصي، المشاريع، إلخ. لكل مساحة مجموعات علامات تبويب خاصة بها.",
 
         // Storage Errors
         storage_error_quota: "⚠️ التخزين ممتلئ ⚠️\n\nتعذر حفظ تغييراتك لأنه تم تجاوز حد تخزين الامتداد.\n\nيرجى:\n1. حذف المجموعات القديمة\n2. أو تصدير البيانات ومسح القائمة",
@@ -3254,6 +3320,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "أو",
         import_browse: "تصفح الملفات",
         import_drop_hint: "ملفات .json فقط",
+        import_paste_toggle: "لصق نص JSON",
+        import_paste_placeholder: "الصق نسخة JSON الاحتياطية هنا...",
+        import_paste_btn: "معالجة",
+        import_paste_empty: "يرجى لصق نص JSON أولاً",
+        import_paste_invalid_json: "النص الملصق ليس JSON صالحاً",
         import_one_file_only: "يرجى إفلات ملف واحد فقط في كل مرة",
         import_invalid_format: "يرجى اختيار ملف JSON صالح",
         import_invalid_data: "تنسيق نسخة احتياطية غير صالح",
@@ -3335,7 +3406,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "حذف جميع البيانات المحفوظة وإعادة الامتداد إلى حالته الأصلية",
         reset_button: "إعادة تعيين الامتداد",
         reset_confirm_title: "إعادة تعيين الامتداد؟",
-        reset_confirm_message: "سيؤدي هذا إلى حذف جميع علامات التبويب المحفوظة، المجموعات، المستخدمين، والإعدادات. لا يمكن التراجع عن هذا الإجراء.",
+        reset_confirm_message: "سيؤدي هذا إلى حذف جميع علامات التبويب المحفوظة، المجموعات، المساحات، والإعدادات. لا يمكن التراجع عن هذا الإجراء.",
         reset_backup_checkbox: "إنشاء نسخة احتياطية قبل إعادة التعيين",
         reset_cancel: "إلغاء",
         reset_confirm: "إعادة تعيين",
@@ -3353,7 +3424,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "إلغاء إعادة التعيين",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ تحذير نهائي ⚠️\n\nسيتم حذف ما يلي نهائياً:\n\n• جميع علامات التبويب المحفوظة\n• جميع المجموعات\n• جميع المستخدمين\n• جميع الإعدادات\n\nلا يمكن التراجع عن هذا.\n\nهل أنت متأكد من رغبتك في المتابعة؟",
+        reset_final_confirm: "⚠️ تحذير نهائي ⚠️\n\nسيتم حذف ما يلي نهائياً:\n\n• جميع علامات التبويب المحفوظة\n• جميع المجموعات\n• جميع المساحات\n• جميع الإعدادات\n\nلا يمكن التراجع عن هذا.\n\nهل أنت متأكد من رغبتك في المتابعة؟",
 
         // Restore Backup
         restore_button: "استعادة نسخة احتياطية",
@@ -3479,7 +3550,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "لم يتم العثور على أجهزة أخرى",
         undo_restore: "استعادة",
         undo_selected: "المحدد",
-        undo_sign_in: "سجل الدخول في Chrome لرؤية الأجهزة الأخرى",
+        undo_sign_in: "سجل الدخول في متصفحك لرؤية الأجهزة الأخرى",
 
         // Dashboard extras
         no_metrics: "لا توجد نتائج",
@@ -3505,7 +3576,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "خطأ: استخدم اللوحة لاستعادة علامة التبويب هذه.",
 
         // HTML keys
-        sidebar_quick_save: "حفظ"
+        sidebar_quick_save: "حفظ",
+
+        // Header Button Tooltips
+        tooltip_import_export: "استيراد / تصدير",
+        tooltip_import: "استيراد",
+        tooltip_settings: "الإعدادات",
+        tooltip_tools: "أدوات",
+        tooltip_language: "تغيير اللغة",
+        tooltip_theme: "تغيير المظهر",
+        tooltip_help: "مساعدة"
     };
     // bn
     TRANSLATIONS.bn = {
@@ -3632,8 +3712,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "সক্ষম থাকলে, AllTab অ্যাপ পেজটি একটি পিন করা ট্যাব হয়ে যাবে।",
         settings_ignore_pinned: "পিন করা ট্যাব উপেক্ষা করুন",
         settings_ignore_pinned_tooltip: "সক্ষম থাকলে, পিন করা ট্যাব কখনই AllTab এ সংরক্ষিত হবে না।",
-        settings_use_chrome_groups: "Chrome গ্রুপ ব্যবহার করুন",
-        settings_use_chrome_groups_tooltip: "সক্ষম থাকলে, গ্রুপ পুনরুদ্ধার করার সময়, এটি তার আসল নাম এবং রঙের সাথে Chrome ট্যাব গ্রুপটি পুনরায় তৈরি করার চেষ্টা করবে।",
+        settings_use_chrome_groups: "ট্যাব গ্রুপ ব্যবহার করুন",
+        settings_use_chrome_groups_tooltip: "সক্ষম থাকলে, গ্রুপ পুনরুদ্ধার করার সময়, এটি তার আসল নাম এবং রঙের সাথে ব্রাউজারের ট্যাব গ্রুপটি পুনরায় তৈরি করার চেষ্টা করবে।",
 
         // Settings - Tools
         settings_tools: "টুলস",
@@ -3684,7 +3764,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "নতুন HTML এক্সপোর্ট করুন (পরিবর্তন সংরক্ষণ করুন)",
         export_bookmark: "বুকমার্ক করুন",
         group_add_bookmarks_folder: "গ্রুপটিকে পছন্দসই তালিকায় যোগ করুন",
-        bookmarks_chrome_tooltip: "পছন্দসইগুলি Chrome বুকমার্ক বারে যোগ করা হবে",
+        bookmarks_chrome_tooltip: "পছন্দসইগুলি ব্রাউজারের বুকমার্ক বারে যোগ করা হবে",
         export_save_app: "ডাউনলোড",
         export_footer_created: "এক্সটেনশন দিয়ে তৈরি",
         export_empty_title: "সব পরিষ্কার!",
@@ -3862,21 +3942,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "নোট এক্সপোর্ট করা হয়েছে",
         notes_viewer_tip: "পরামর্শ: সহজে ফিল্টার করতে আপনার নোটে ট্যাগ ব্যবহার করুন। যেমন: #গুরুত্বপূর্ণ #পরে_পড়ব",
         context_menu_tooltip: "আরও বিকল্প (বা রাইট ক্লিক)",
-        context_copy_to_user: "অন্য ব্যবহারকারীর কাছে কপি করুন",
-        copy_group_to_user: "গ্রুপটি অন্য ব্যবহারকারীর কাছে কপি করুন",
-        copied_to_user: "{user} এর কাছে কপি করা হয়েছে",
-        no_other_users: "অন্য কোনো ব্যবহারকারী উপলব্ধ নেই",
+        context_copy_to_space: "অন্য স্পেসে কপি করুন",
+        copy_group_to_space: "গ্রুপটি অন্য স্পেসে কপি করুন",
+        copied_to_space: "{space} এ কপি করা হয়েছে",
+        no_other_spaces: "অন্য কোনো স্পেস উপলব্ধ নেই",
 
-        // User Management
-        user_menu_title: "ব্যবহারকারী",
-        user_add: "ব্যবহারকারী যোগ করুন",
-        user_rename_title: "ব্যবহারকারীর নাম পরিবর্তন",
+        // Space Management
+        space_menu_title: "স্পেস",
+        space_add: "স্পেস যোগ করুন",
+        space_rename_title: "স্পেসের নাম পরিবর্তন",
         btn_rename: "নাম পরিবর্তন",
         btn_delete: "মুছুন",
-        delete_user_confirm: "আপনি কি সত্যিই এই ব্যবহারকারীকে মুছতে চান? এর সব ট্যাব গ্রুপ হারিয়ে যাবে।",
-        confirm_delete: "আপনি কি ব্যবহারকারী মুছতে চান",
-        drag_to_reorder: "পুনরায় সাজাতে টেনে আনুন",
-        of_user: "এর",
+        delete_space_confirm: "আপনি কি সত্যিই এই স্পেসটি মুছতে চান? এর সব ট্যাব গ্রুপ হারিয়ে যাবে।",
+        confirm_delete: "আপনি কি স্পেস মুছতে চান",
+        drag_to_reorder: "পুনরায় সাজাতে টেনে আনুন",
+        of_space: "এর",
+        space_word: "স্পেস",
+        space_info_tooltip: "স্পেসগুলি আপনাকে প্রসঙ্গ অনুসারে আপনার ট্যাবগুলি আলাদা করতে দেয়: কাজ, ব্যক্তিগত, প্রকল্প ইত্যাদি। প্রতিটি স্পেসের নিজস্ব ট্যাব গ্রুপ রয়েছে।",
 
         // Storage Errors
         storage_error_quota: "⚠️ স্টোরেজ পূর্ণ ⚠️\n\nআপনার পরিবর্তন সংরক্ষণ করা যায়নি কারণ এক্সটেনশনের স্টোরেজ কোটা অতিক্রম করেছে।\n\nঅনুগ্রহ করে:\n১. পুরানো গ্রুপ মুছুন\n২. অথবা ডেটা এক্সপোর্ট করুন এবং তালিকা পরিষ্কার করুন",
@@ -3954,6 +4036,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "অথবা",
         import_browse: "ফাইল ব্রাউজ করুন",
         import_drop_hint: "শুধুমাত্র .json ফাইল",
+        import_paste_toggle: "JSON টেক্সট পেস্ট করুন",
+        import_paste_placeholder: "এখানে আপনার JSON ব্যাকআপ পেস্ট করুন...",
+        import_paste_btn: "প্রক্রিয়া",
+        import_paste_empty: "অনুগ্রহ করে প্রথমে JSON টেক্সট পেস্ট করুন",
+        import_paste_invalid_json: "পেস্ট করা টেক্সট বৈধ JSON নয়",
         import_one_file_only: "অনুগ্রহ করে একবারে একটি মাত্র ফাইল ফেলুন",
         import_invalid_format: "অনুগ্রহ করে একটি বৈধ JSON ফাইল নির্বাচন করুন",
         import_invalid_data: "অবৈধ ব্যাকআপ ফরম্যাট",
@@ -4035,7 +4122,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "সমস্ত সংরক্ষিত ডেটা মুছুন এবং এক্সটেনশনকে তার মূল অবস্থায় ফিরিয়ে আনুন",
         reset_button: "এক্সটেনশন রিসেট করুন",
         reset_confirm_title: "এক্সটেনশন রিসেট করবেন?",
-        reset_confirm_message: "এটি সমস্ত সংরক্ষিত ট্যাব, গ্রুপ, ব্যবহারকারী এবং সেটিংস মুছে ফেলবে। এই ক্রিয়াটি পূর্বাবস্থায় ফেরানো যাবে না।",
+        reset_confirm_message: "এটি সমস্ত সংরক্ষিত ট্যাব, গ্রুপ, স্পেস এবং সেটিংস মুছে ফেলবে। এই ক্রিয়াটি পূর্বাবস্থায় ফেরানো যাবে না।",
         reset_backup_checkbox: "রিসেট করার আগে ব্যাকআপ তৈরি করুন",
         reset_cancel: "বাতিল",
         reset_confirm: "রিসেট",
@@ -4053,7 +4140,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "রিসেট বাতিল",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ শেষ সতর্কতা ⚠️\n\nনিম্নলিখিতগুলি চিরতরে মুছে ফেলা হবে:\n\n• সমস্ত সংরক্ষিত ট্যাব\n• সমস্ত গ্রুপ\n• সমস্ত ব্যবহারকারী\n• সমস্ত সেটিংস\n\nএটি পূর্বাবস্থায় ফেরানো যাবে না।\n\nআপনি কি সত্যিই চালিয়ে যেতে চান?",
+        reset_final_confirm: "⚠️ শেষ সতর্কতা ⚠️\n\nনিম্নলিখিতগুলি চিরতরে মুছে ফেলা হবে:\n\n• সমস্ত সংরক্ষিত ট্যাব\n• সমস্ত গ্রুপ\n• সমস্ত স্পেস\n• সমস্ত সেটিংস\n\nএটি পূর্বাবস্থায় ফেরানো যাবে না।\n\nআপনি কি সত্যিই চালিয়ে যেতে চান?",
 
         // Restore Backup
         restore_button: "ব্যাকআপ পুনরুদ্ধার করুন",
@@ -4179,7 +4266,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "কোনো অন্যান্য ডিভাইস পাওয়া যায়নি",
         undo_restore: "পুনরুদ্ধার",
         undo_selected: "নির্বাচিত",
-        undo_sign_in: "ওান্য ডিভাইস দেখতে Chrome এ সাইন ইন করুন",
+        undo_sign_in: "অন্য ডিভাইস দেখতে আপনার ব্রাউজারে সাইন ইন করুন",
 
         // Dashboard extras
         no_metrics: "কোনো ফলাফল নেই",
@@ -4205,7 +4292,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "ত্রুটি: এই ট্যাব পুনরুদ্ধার করতে ড্যাশবোর্ড ব্যবহার করুন।",
 
         // HTML keys
-        sidebar_quick_save: "সংরক্ষণ"
+        sidebar_quick_save: "সংরক্ষণ",
+
+        // Header Button Tooltips
+        tooltip_import_export: "ইম্পোর্ট / এক্সপোর্ট",
+        tooltip_import: "ইম্পোর্ট",
+        tooltip_settings: "সেটিংস",
+        tooltip_tools: "টুলস",
+        tooltip_language: "ভাষা পরিবর্তন",
+        tooltip_theme: "থিম পরিবর্তন",
+        tooltip_help: "সাহায্য"
     };
     // ur
     TRANSLATIONS.ur = {
@@ -4332,8 +4428,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "اگر فعال ہے، تو AllTab ایپ پیج پن کیا ہوا ٹیب بن جائے گا۔",
         settings_ignore_pinned: "پن کیے ہوئے ٹیبز کو نظر انداز کریں",
         settings_ignore_pinned_tooltip: "اگر فعال ہے، تو پن کیے ہوئے ٹیبز کبھی بھی AllTab میں محفوظ نہیں ہوں گے۔",
-        settings_use_chrome_groups: "Chrome گروپس استعمال کریں",
-        settings_use_chrome_groups_tooltip: "اگر فعال ہے، گروپ بحال کرتے وقت، یہ اس کے اصل نام اور رنگ کے ساتھ Chrome ٹیب گروپ دوبارہ بنانے کی کوشش کرے گا۔",
+        settings_use_chrome_groups: "ٹیب گروپس استعمال کریں",
+        settings_use_chrome_groups_tooltip: "اگر فعال ہے، گروپ بحال کرتے وقت، یہ اس کے اصل نام اور رنگ کے ساتھ براؤزر ٹیب گروپ دوبارہ بنانے کی کوشش کرے گا۔",
 
         // Settings - Tools
         settings_tools: "ٹولز",
@@ -4384,7 +4480,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "نیا HTML ایکسپورٹ کریں (تبدیلیاں محفوظ کریں)",
         export_bookmark: "بک مارک کریں",
         group_add_bookmarks_folder: "گروپ کو پسندیدہ میں شامل کریں",
-        bookmarks_chrome_tooltip: "پسندیدہ Chrome بک مارک بار میں شامل کیے جائیں گے",
+        bookmarks_chrome_tooltip: "پسندیدہ براؤزر بک مارک بار میں شامل کیے جائیں گے",
         export_save_app: "ڈاؤن لوڈ",
         export_footer_created: "ایکسٹینشن کے ساتھ بنایا گیا",
         export_empty_title: "سب صاف!",
@@ -4562,21 +4658,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "نوٹس ایکسپورٹ کیے گئے",
         notes_viewer_tip: "مشورہ: آسانی سے فلٹر کرنے کے لیے اپنے نوٹس میں ٹیگز استعمال کریں۔ جیسے: #اہم #بعد_میں_پڑھیں",
         context_menu_tooltip: "مزید اختیارات (یا رائٹ کلک)",
-        context_copy_to_user: "دوسرے صارف کو کاپی کریں",
-        copy_group_to_user: "گروپ دوسرے صارف کو کاپی کریں",
-        copied_to_user: "{user} کو کاپی کیا گیا",
-        no_other_users: "کوئی دوسرا صارف دستیاب نہیں",
+        context_copy_to_space: "دوسری اسپیس میں کاپی کریں",
+        copy_group_to_space: "گروپ دوسری اسپیس میں کاپی کریں",
+        copied_to_space: "{space} میں کاپی کیا گیا",
+        no_other_spaces: "کوئی دوسری اسپیس دستیاب نہیں",
 
-        // User Management
-        user_menu_title: "صارفین",
-        user_add: "صارف شامل کریں",
-        user_rename_title: "صارف کا نام تبدیل کریں",
+        // Space Management
+        space_menu_title: "اسپیسز",
+        space_add: "اسپیس شامل کریں",
+        space_rename_title: "اسپیس کا نام تبدیل کریں",
         btn_rename: "نام تبدیل کریں",
         btn_delete: "حذف کریں",
-        delete_user_confirm: "کیا آپ واقعی اس صارف کو حذف کرنا چاہتے ہیں؟ اس کے تمام ٹیب گروپس ضائع ہو جائیں گے۔",
-        confirm_delete: "کیا آپ صارف حذف کرنا چاہتے ہیں",
+        delete_space_confirm: "کیا آپ واقعی اس اسپیس کو حذف کرنا چاہتے ہیں؟ اس کے تمام ٹیب گروپس ضائع ہو جائیں گے۔",
+        confirm_delete: "کیا آپ اسپیس حذف کرنا چاہتے ہیں",
         drag_to_reorder: "دوبارہ ترتیب دینے کے لیے ڈریگ کریں",
-        of_user: "کا",
+        of_space: "کا",
+        space_word: "اسپیس",
+        space_info_tooltip: "اسپیسز آپ کو اپنے ٹیبز کو سیاق و سباق کے مطابق الگ کرنے دیتے ہیں: کام، ذاتی، پروجیکٹس وغیرہ۔ ہر اسپیس کے اپنے ٹیب گروپس ہوتے ہیں۔",
 
         // Storage Errors
         storage_error_quota: "⚠️ اسٹوریج مکمل ⚠️\n\nآپ کی تبدیلیاں محفوظ نہیں کی جا سکیں کیونکہ ایکسٹینشن کا اسٹوریج کوٹہ تجاوز کر گیا ہے۔\n\nبراہ کرم:\n1. پرانے گروپس حذف کریں\n2. یا ڈیٹا ایکسپورٹ کریں اور فہرست صاف کریں",
@@ -4654,6 +4752,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "یا",
         import_browse: "فائلیں براؤز کریں",
         import_drop_hint: "صرف .json فائلیں",
+        import_paste_toggle: "JSON متن چسپاں کریں",
+        import_paste_placeholder: "اپنا JSON بیک اپ یہاں چسپاں کریں...",
+        import_paste_btn: "پروسیس",
+        import_paste_empty: "پہله JSON متن چسپاں کریں",
+        import_paste_invalid_json: "چسپاں کیا گیا متن درست JSON نہیں ہے",
         import_one_file_only: "براہ کرم ایک بار میں صرف ایک فائل چھوڑیں",
         import_invalid_format: "براہ کرم ایک درست JSON فائل منتخب کریں",
         import_invalid_data: "غیر درست بیک اپ فارمیٹ",
@@ -4735,7 +4838,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "تمام محفوظ ڈیٹا حذف کریں اور ایکسٹینشن کو اس کی اصل حالت میں واپس لائیں",
         reset_button: "ایکسٹینشن ری سیٹ کریں",
         reset_confirm_title: "ایکسٹینشن ری سیٹ کریں؟",
-        reset_confirm_message: "یہ تمام محفوظ ٹیبز، گروپس، صارفین، اور ترتیبات کو حذف کر دے گا۔ اسے کالعدم نہیں کیا جا سکتا۔",
+        reset_confirm_message: "یہ تمام محفوظ ٹیبز، گروپس، اسپیسز، اور ترتیبات کو حذف کر دے گا۔ اسے کالعدم نہیں کیا جا سکتا۔",
         reset_backup_checkbox: "ری سیٹ کرنے سے پہلے بیک اپ بنائیں",
         reset_cancel: "منسوخ",
         reset_confirm: "ری سیٹ",
@@ -4753,7 +4856,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "ری سیٹ منسوخ",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ آخری تنبیہ ⚠️\n\nدرج ذیل ہمیشہ کے لیے حذف کر دیے جائیں گے:\n\n• تمام محفوظ ٹیبز\n• تمام گروپس\n• تمام صارفین\n• تمام ترتیبات\n\nاسے کالعدم نہیں کیا جا سکتا۔\n\nکیا آپ واقعی جاری رکھنا چاہتے ہیں؟",
+        reset_final_confirm: "⚠️ آخری تنبیہ ⚠️\n\nدرج ذیل ہمیشہ کے لیے حذف کر دیے جائیں گے:\n\n• تمام محفوظ ٹیبز\n• تمام گروپس\n• تمام اسپیسز\n• تمام ترتیبات\n\nاسے کالعدم نہیں کیا جا سکتا۔\n\nکیا آپ واقعی جاری رکھنا چاہتے ہیں؟",
 
         // Restore Backup
         restore_button: "بیک اپ بحال کریں",
@@ -4879,7 +4982,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "کوئی دوسرا آلہ نہیں ملا",
         undo_restore: "بحال",
         undo_selected: "منتخب",
-        undo_sign_in: "دوسرے آلات دیکھنے کے لیے Chrome میں سائن ان کریں",
+        undo_sign_in: "دوسرے آلات دیکھنے کے لیے اپنے براؤزر میں سائن ان کریں",
 
         // Dashboard extras
         no_metrics: "کوئی نتیجہ نہیں",
@@ -4905,7 +5008,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "غلطی: اس ٹیب کو بحال کرنے کے لیے ڈیش بورڈ استعمال کریں۔",
 
         // HTML keys
-        sidebar_quick_save: "محفوظ"
+        sidebar_quick_save: "محفوظ",
+
+        // Header Button Tooltips
+        tooltip_import_export: "درآمد / برآمد",
+        tooltip_import: "درآمد",
+        tooltip_settings: "سیٹنگز",
+        tooltip_tools: "ٹولز",
+        tooltip_language: "زبان تبدیل کریں",
+        tooltip_theme: "تھیم تبدیل کریں",
+        tooltip_help: "مدد"
     };
     // id
     TRANSLATIONS.id = {
@@ -5032,8 +5144,8 @@ if (typeof TRANSLATIONS !== 'undefined') {
         settings_pin_tab_tooltip: "Jika diaktifkan, halaman aplikasi AllTab akan menjadi tab yang disematkan.",
         settings_ignore_pinned: "Abaikan Tab yang Disematkan",
         settings_ignore_pinned_tooltip: "Jika diaktifkan, tab yang disematkan tidak akan pernah disimpan ke AllTab.",
-        settings_use_chrome_groups: "Gunakan Grup Chrome",
-        settings_use_chrome_groups_tooltip: "Jika diaktifkan, saat memulihkan grup, ekstensi akan mencoba membuat ulang grup tab Chrome dengan nama dan warna aslinya.",
+        settings_use_chrome_groups: "Gunakan Grup Tab",
+        settings_use_chrome_groups_tooltip: "Jika diaktifkan, saat memulihkan grup, ekstensi akan mencoba membuat ulang grup tab browser dengan nama dan warna aslinya.",
 
         // Settings - Tools
         settings_tools: "Alat",
@@ -5084,7 +5196,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         export_btn_save: "Ekspor HTML Baru (Simpan Perubahan)",
         export_bookmark: "Tandai",
         group_add_bookmarks_folder: "Tambahkan grup ke favorit",
-        bookmarks_chrome_tooltip: "Favorit akan ditambahkan ke bilah penanda Chrome",
+        bookmarks_chrome_tooltip: "Favorit akan ditambahkan ke bilah penanda browser",
         export_save_app: "Unduh",
         export_footer_created: "Dibuat dengan Ekstensi",
         export_empty_title: "Semua Bersih!",
@@ -5262,21 +5374,23 @@ if (typeof TRANSLATIONS !== 'undefined') {
         notes_viewer_exported: "Catatan diekspor",
         notes_viewer_tip: "Tip: Gunakan tag di catatan Anda untuk penyaringan yang mudah. Contoh: #penting #baca_nanti",
         context_menu_tooltip: "Opsi lainnya (atau klik kanan)",
-        context_copy_to_user: "Salin ke pengguna lain",
-        copy_group_to_user: "Salin grup ke pengguna lain",
-        copied_to_user: "Disalin ke {user}",
-        no_other_users: "Tidak ada pengguna lain yang tersedia",
+        context_copy_to_space: "Salin ke ruang lain",
+        copy_group_to_space: "Salin grup ke ruang lain",
+        copied_to_space: "Disalin ke {space}",
+        no_other_spaces: "Tidak ada ruang lain yang tersedia",
 
-        // User Management
-        user_menu_title: "Pengguna",
-        user_add: "Tambah Pengguna",
-        user_rename_title: "Ganti Nama Pengguna",
+        // Space Management
+        space_menu_title: "Ruang",
+        space_add: "Tambah Ruang",
+        space_rename_title: "Ganti Nama Ruang",
         btn_rename: "Ganti Nama",
         btn_delete: "Hapus",
-        delete_user_confirm: "Apakah Anda yakin ingin menghapus pengguna ini? Semua grup tabnya akan hilang.",
-        confirm_delete: "Apakah Anda ingin menghapus pengguna",
+        delete_space_confirm: "Apakah Anda yakin ingin menghapus ruang ini? Semua grup tabnya akan hilang.",
+        confirm_delete: "Apakah Anda ingin menghapus ruang",
         drag_to_reorder: "Seret untuk menyusun ulang",
-        of_user: "milik",
+        of_space: "milik",
+        space_word: "Ruang",
+        space_info_tooltip: "Ruang memungkinkan Anda memisahkan tab berdasarkan konteks: kerja, pribadi, proyek, dll. Setiap ruang memiliki grup tab sendiri.",
 
         // Storage Errors
         storage_error_quota: "⚠️ Penyimpanan Penuh ⚠️\n\nPerubahan Anda tidak dapat disimpan karena kuota penyimpanan ekstensi terlampaui.\n\nSilakan:\n1. Hapus grup lama\n2. Atau ekspor data dan bersihkan daftar",
@@ -5354,6 +5468,11 @@ if (typeof TRANSLATIONS !== 'undefined') {
         import_drop_or: "atau",
         import_browse: "Jelajahi File",
         import_drop_hint: "Hanya file .json",
+        import_paste_toggle: "Tempel teks JSON",
+        import_paste_placeholder: "Tempel cadangan JSON Anda di sini...",
+        import_paste_btn: "Proses",
+        import_paste_empty: "Harap tempel teks JSON terlebih dahulu",
+        import_paste_invalid_json: "Teks yang ditempel bukan JSON yang valid",
         import_one_file_only: "Harap lepaskan hanya satu file dalam satu waktu",
         import_invalid_format: "Harap pilih file JSON yang valid",
         import_invalid_data: "Format cadangan tidak valid",
@@ -5435,7 +5554,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         reset_description: "Hapus semua data yang disimpan dan kembalikan ekstensi ke keadaan semula",
         reset_button: "Atur Ulang Ekstensi",
         reset_confirm_title: "Atur Ulang Ekstensi?",
-        reset_confirm_message: "Ini akan menghapus semua tab yang disimpan, grup, pengguna, dan pengaturan. Tindakan ini tidak dapat dibatalkan.",
+        reset_confirm_message: "Ini akan menghapus semua tab yang disimpan, grup, ruang, dan pengaturan. Tindakan ini tidak dapat dibatalkan.",
         reset_backup_checkbox: "Buat cadangan sebelum mengatur ulang",
         reset_cancel: "Batal",
         reset_confirm: "Atur Ulang",
@@ -5453,7 +5572,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         backup_cancel: "Batalkan Atur Ulang",
 
         // Final Reset Confirmation
-        reset_final_confirm: "⚠️ Peringatan Terakhir ⚠️\n\nBerikut ini akan dihapus selamanya:\n\n• Semua tab tersimpan\n• Semua grup\n• Semua pengguna\n• Semua pengaturan\n\nIni tidak dapat dibatalkan.\n\nApakah Anda benar-benar ingin melanjutkan?",
+        reset_final_confirm: "⚠️ Peringatan Terakhir ⚠️\n\nBerikut ini akan dihapus selamanya:\n\n• Semua tab tersimpan\n• Semua grup\n• Semua ruang\n• Semua pengaturan\n\nIni tidak dapat dibatalkan.\n\nApakah Anda benar-benar ingin melanjutkan?",
 
         // Restore Backup
         restore_button: "Pulihkan Cadangan",
@@ -5579,7 +5698,7 @@ if (typeof TRANSLATIONS !== 'undefined') {
         undo_no_devices: "Tidak ada perangkat lain ditemukan",
         undo_restore: "Pulihkan",
         undo_selected: "Dipilih",
-        undo_sign_in: "Masuk ke Chrome untuk melihat perangkat lain",
+        undo_sign_in: "Masuk ke browser Anda untuk melihat tab dari perangkat lain",
 
         // Dashboard extras
         no_metrics: "Tidak ada hasil",
@@ -5605,7 +5724,16 @@ if (typeof TRANSLATIONS !== 'undefined') {
         sleeping_error_no_url: "Kesalahan: Gunakan Dasbor untuk memulihkan tab ini.",
 
         // HTML keys
-        sidebar_quick_save: "Simpan"
+        sidebar_quick_save: "Simpan",
+
+        // Header Button Tooltips
+        tooltip_import_export: "Impor / Ekspor",
+        tooltip_import: "Impor",
+        tooltip_settings: "Pengaturan",
+        tooltip_tools: "Alat",
+        tooltip_language: "Ubah bahasa",
+        tooltip_theme: "Ganti tema",
+        tooltip_help: "Bantuan"
     };
 
 }
