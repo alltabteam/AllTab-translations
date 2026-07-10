@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "Gestor de pestañas todo en uno — gestor de sesiones, suspender pestañas, modo oscuro, organizar pestañas, amplificador de volumen, grupos, recarga automática y más."
+    },
+    "cmd_open_dashboard": {
+        "message": "Abrir panel de AllTab"
+    },
+    "cmd_save_window": {
+        "message": "Guardar toda la ventana"
+    },
+    "cmd_save_active": {
+        "message": "Guardar pestaña actual"
+    },
+    "cmd_hibernate_active": {
+        "message": "Hibernar pestaña actual"
+    }
+}

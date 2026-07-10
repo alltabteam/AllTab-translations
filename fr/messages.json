@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "Gestionnaire d'onglets tout-en-un — sessions, suspendre onglets, mode sombre, organiser onglets, amplificateur de volume, groupes, rechargement auto & plus."
+    },
+    "cmd_open_dashboard": {
+        "message": "Ouvrir le tableau de bord AllTab"
+    },
+    "cmd_save_window": {
+        "message": "Enregistrer tous les onglets de la fenêtre actuelle"
+    },
+    "cmd_save_active": {
+        "message": "Enregistrer l'onglet actuel"
+    },
+    "cmd_hibernate_active": {
+        "message": "Mettre en veille l'onglet actuel"
+    }
+}

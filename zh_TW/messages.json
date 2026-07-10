@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "一站式分頁管理器 — 工作階段管理、暫停分頁、深色模式、整理分頁、音量增強、群組、自動重新整理等。"
+    },
+    "cmd_open_dashboard": {
+        "message": "開啟 AllTab 儀表板"
+    },
+    "cmd_save_window": {
+        "message": "儲存目前視窗的所有分頁"
+    },
+    "cmd_save_active": {
+        "message": "儲存目前分頁"
+    },
+    "cmd_hibernate_active": {
+        "message": "休眠目前分頁"
+    }
+}

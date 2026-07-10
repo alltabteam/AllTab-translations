@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "一站式标签页管理器 — 会话管理、暂停标签页、深色模式、整理标签页、音量增强、分组、自动刷新等。"
+    },
+    "cmd_open_dashboard": {
+        "message": "打开 AllTab 仪表板"
+    },
+    "cmd_save_window": {
+        "message": "保存当前窗口的所有标签页"
+    },
+    "cmd_save_active": {
+        "message": "保存当前标签页"
+    },
+    "cmd_hibernate_active": {
+        "message": "休眠当前标签页"
+    }
+}

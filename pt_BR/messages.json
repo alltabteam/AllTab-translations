@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "Gerenciador de abas completo — gerenciador de sessões, suspender abas, modo escuro, organizar abas, amplificador de volume, grupos, recarga automática e mais."
+    },
+    "cmd_open_dashboard": {
+        "message": "Abrir painel do AllTab"
+    },
+    "cmd_save_window": {
+        "message": "Salvar todas as abas da janela atual"
+    },
+    "cmd_save_active": {
+        "message": "Salvar aba atual"
+    },
+    "cmd_hibernate_active": {
+        "message": "Hibernar aba atual"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "All-in-one tab manager — session manager, suspend tabs, dark mode, organize tabs, volume booster, tab groups, auto reload & more."
+    },
+    "cmd_open_dashboard": {
+        "message": "Open AllTab Dashboard"
+    },
+    "cmd_save_window": {
+        "message": "Save all tabs in current window"
+    },
+    "cmd_save_active": {
+        "message": "Save current tab"
+    },
+    "cmd_hibernate_active": {
+        "message": "Hibernate current tab"
+    }
+}

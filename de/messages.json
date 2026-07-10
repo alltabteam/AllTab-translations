@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "All-in-One-Tab-Manager — Sitzungsverwaltung, Tabs anhalten, Dunkelmodus, Tabs organisieren, Lautstärkeverstärker, Gruppen, automatisch neu laden & mehr."
+    },
+    "cmd_open_dashboard": {
+        "message": "AllTab-Dashboard öffnen"
+    },
+    "cmd_save_window": {
+        "message": "Alle Tabs im aktuellen Fenster speichern"
+    },
+    "cmd_save_active": {
+        "message": "Aktuellen Tab speichern"
+    },
+    "cmd_hibernate_active": {
+        "message": "Aktuellen Tab in den Ruhezustand versetzen"
+    }
+}

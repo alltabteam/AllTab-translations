@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "ऑल-इन-वन टैब मैनेजर — सत्र प्रबंधक, टैब निलंबित, डार्क मोड, टैब व्यवस्थित, वॉल्यूम बूस्टर, समूह, ऑटो रीलोड और भी बहुत कुछ।"
+    },
+    "cmd_open_dashboard": {
+        "message": "AllTab डैशबोर्ड खोलें"
+    },
+    "cmd_save_window": {
+        "message": "वर्तमान विंडो में सभी टैब सहेजें"
+    },
+    "cmd_save_active": {
+        "message": "वर्तमान टैब सहेजें"
+    },
+    "cmd_hibernate_active": {
+        "message": "वर्तमान टैब को हाइबरनेट करें"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "올인원 탭 관리자 — 세션 관리, 탭 일시중지, 다크 모드, 탭 정리, 볼륨 부스터, 그룹, 자동 새로고침 등."
+    },
+    "cmd_open_dashboard": {
+        "message": "AllTab 대시보드 열기"
+    },
+    "cmd_save_window": {
+        "message": "현재 창의 모든 탭 저장"
+    },
+    "cmd_save_active": {
+        "message": "현재 탭 저장"
+    },
+    "cmd_hibernate_active": {
+        "message": "현재 탭 절전 모드"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "extName": {
+        "message": "AllTab"
+    },
+    "extDescription": {
+        "message": "オールインワンタブマネージャー — セッション管理、タブ一時停止、ダークモード、タブ整理、音量ブースター、グループ、自動リロードなど。"
+    },
+    "cmd_open_dashboard": {
+        "message": "AllTabダッシュボードを開く"
+    },
+    "cmd_save_window": {
+        "message": "現在のウィンドウのすべてのタブを保存"
+    },
+    "cmd_save_active": {
+        "message": "現在のタブを保存"
+    },
+    "cmd_hibernate_active": {
+        "message": "現在のタブを休止状態にする"
+    }
+}
